@@ -1,0 +1,64 @@
+    1  ls -la
+    2  ssh-keygen
+    3  cat .ssh/id_ed25519.pub 
+    4  mkdir -p download documents/git/
+    5  cd documents/git/
+    6  git clone https://github.com/Jakobrennan/yellodog-test.git
+    7  touch README.md
+    8  vim README.md
+    9  git add README.md 
+   10  ls -la
+   11  man rm
+   12  rm -irf ./*
+   13  ls =la
+   14  ls -la
+   15  git clone https://github.com/Jakobrennan/yellowdog-test.git
+   16  cd yellowdog-test/
+   17  vim README.md
+   18  git add README.md 
+   19  git commit -m "adding inital readme "
+   20  git push origin HEAD
+   21  git config --global user.email "jakobrennan@gmail.com"
+   22  git config --global user.name "jakobrennan"
+   23  git push origin HEAD
+   24  git remote -v
+   25  git remote set-url origin https://github.com/Jakobrennan/yellowdog-test.git
+   26  git push
+   27  sed -i.bak '/github.com/d' ~/.git-credentials 2>/dev/null || true
+   28  git config --global --unset credential.helper 2>/dev/null || true
+   29  git config --global credential.helper store
+   30  git push
+   31  git config list
+   32  git status
+   33  git add -A
+   34  git commit -m "2
+   35  git commit -m "another admission"
+   36  git push origin HEAD
+   37  pwd
+   38  ls -la
+   39  ll
+   40  cd documents/git/
+   41  ll
+   42  cd yellowdog-test/
+   43  ll
+   44  git add -A
+   45  git status
+   46  git push
+   47  git config
+   48  cd ..
+   49  rm -rf yellowdog-test/
+   50  ls -la
+   51  git clone git@github.com:Jakobrennan/yellowdog-test.git
+   52  cd yellowdog-test/
+   53  ll
+   54  touch README.md
+   55  vim README.md
+   56  git status
+   57  git add -A
+   58  git commit -m "added template for grafana and loki, mimir takes advantage of the helm charts in the grafana helm repo\nat the 1 hour mark\nneed to work smarter as i'm taking up too much time"
+   59  git push origin HEAD
+   60  pwd
+   61  ls -la
+   62  mkdir commands
+   63  cd commands
+   64  history > yellowdog_user_command.txt
