@@ -1,0 +1,19 @@
+    1  groupadd docker
+    2  usermod -aG docker yellowdog
+    3  id -a yellowdog
+    4  newgrp docker
+    5  cd /
+    6  du -schl
+    7  du -ahx / | sort -rh | head -n 20
+    8  cd /var/
+    9  ll
+   10  journalctl --vaccume-time=1d
+   11  journalctl --vacuume-time=1d
+   12  journalctl --vacuume-time=7d
+   13  journalctl --vacuum-time=7d
+   14  du -ahx / | sort -rh | head -n 20
+   15  ls -la
+   16  ls -lah
+   17  cd /tmp/
+   18  ls -lah
+   19  history > /home/yellowdog/documents/git/yellowdog-test/commands/root_commands.txt
