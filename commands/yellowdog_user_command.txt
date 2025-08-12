@@ -1,64 +1,180 @@
-    1  ls -la
-    2  ssh-keygen
-    3  cat .ssh/id_ed25519.pub 
-    4  mkdir -p download documents/git/
-    5  cd documents/git/
-    6  git clone https://github.com/Jakobrennan/yellodog-test.git
-    7  touch README.md
-    8  vim README.md
-    9  git add README.md 
-   10  ls -la
-   11  man rm
-   12  rm -irf ./*
-   13  ls =la
-   14  ls -la
-   15  git clone https://github.com/Jakobrennan/yellowdog-test.git
-   16  cd yellowdog-test/
-   17  vim README.md
-   18  git add README.md 
-   19  git commit -m "adding inital readme "
-   20  git push origin HEAD
-   21  git config --global user.email "jakobrennan@gmail.com"
-   22  git config --global user.name "jakobrennan"
-   23  git push origin HEAD
-   24  git remote -v
-   25  git remote set-url origin https://github.com/Jakobrennan/yellowdog-test.git
-   26  git push
-   27  sed -i.bak '/github.com/d' ~/.git-credentials 2>/dev/null || true
-   28  git config --global --unset credential.helper 2>/dev/null || true
-   29  git config --global credential.helper store
-   30  git push
-   31  git config list
-   32  git status
-   33  git add -A
-   34  git commit -m "2
-   35  git commit -m "another admission"
-   36  git push origin HEAD
-   37  pwd
-   38  ls -la
-   39  ll
-   40  cd documents/git/
-   41  ll
-   42  cd yellowdog-test/
-   43  ll
-   44  git add -A
-   45  git status
-   46  git push
-   47  git config
-   48  cd ..
-   49  rm -rf yellowdog-test/
-   50  ls -la
-   51  git clone git@github.com:Jakobrennan/yellowdog-test.git
-   52  cd yellowdog-test/
-   53  ll
-   54  touch README.md
-   55  vim README.md
-   56  git status
-   57  git add -A
-   58  git commit -m "added template for grafana and loki, mimir takes advantage of the helm charts in the grafana helm repo\nat the 1 hour mark\nneed to work smarter as i'm taking up too much time"
-   59  git push origin HEAD
-   60  pwd
-   61  ls -la
-   62  mkdir commands
-   63  cd commands
-   64  history > yellowdog_user_command.txt
+ls -la
+ssh-keygen
+cat .ssh/id_ed25519.pub 
+mkdir -p download documents/git/
+cd documents/git/
+git clone https://github.com/Jakobrennan/yellodog-test.git
+touch README.md
+vim README.md
+git add README.md 
+ls -la
+man rm
+rm -irf ./*
+ls =la
+ls -la
+git clone https://github.com/Jakobrennan/yellowdog-test.git
+cd yellowdog-test/
+vim README.md
+git add README.md 
+git commit -m "adding inital readme "
+git push origin HEAD
+git config --global user.email "jakobrennan@gmail.com"
+git config --global user.name "jakobrennan"
+git push origin HEAD
+git remote -v
+git remote set-url origin https://github.com/Jakobrennan/yellowdog-test.git
+git push
+sed -i.bak '/github.com/d' ~/.git-credentials 2>/dev/null || true
+git config --global --unset credential.helper 2>/dev/null || true
+git config --global credential.helper store
+git push
+git config list
+git status
+git add -A
+git commit -m "2
+git commit -m "another admission"
+git push origin HEAD
+docker run hello-world
+id -a
+systemctl status 
+ystemctl status
+systemctl status 
+bash
+id -a
+docker run hello-world
+pwd
+ls -la
+ll
+cd documents/git/
+ll
+cd yellowdog-test/
+ll
+git add -A
+git status
+git push
+git config
+cd ..
+rm -rf yellowdog-test/
+ls -la
+git clone git@github.com:Jakobrennan/yellowdog-test.git
+cd yellowdog-test/
+ll
+touch README.md
+vim README.md
+git status
+git add -A
+git commit -m "added template for grafana and loki, mimir takes advantage of the helm charts in the grafana helm repo\nat the 1 hour mark\nneed to work smarter as i'm taking up too much time"
+git push origin HEAD
+pwd
+ls -la
+mkdir commands
+cd commands
+history > yellowdog_user_command.txt
+tail yellowdog_user_command.txt
+git add -A
+cd ..
+git status
+git commit -m "adding commands for view"
+git push origin HEAD
+sudo su -
+git add -A
+git commit -m "adding root commands for same purpose"
+git push origin HEAD
+git log --color --graph
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+source ~/.bashrc 
+nvm use --lts
+nvm 
+nvm install node
+nvm install --lts
+npm
+npm install -g @mermaid-js/mermaid-cli
+mmdc --help
+kubectl get all -ns=grafana
+kubectl get all --namespace=grafana
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+helm -n mimir install mimir grafana/mimir-distributed
+sudo journalctl --vacuum-time=7d
+df -h
+cd ~/download/
+ll
+rm -rf get_helm.sh 
+df -h
+ls -la
+dc ..
+cd ..
+ll
+du -ahx / | sort -rh | head -n 20
+df -h
+id -a
+docker run hello-world
+export os="linux/amd64"
+curl -LO "https://dl.k8s.io/release/$(curl -sL https://dl.k8s.io/release/stable.txt)/bin/$os/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client
+[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.29.0/kind-linux-amd64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
+kind
+kind create cluster
+kubectl create ns grafana
+kubectl create ns mimir
+kubectl create ns loki
+kubectl create ns alloy
+kubectl create ns trivy
+kubectl get ns grafana
+ll
+cd documents/
+ll
+cd git/yellowdog-test/
+ll
+mkdir templates
+cd templates
+mkdir grafana
+cd grafana
+touch grafana.yaml
+kubectl apply -f grafana.yaml --namespace=grafana
+kubectl get pvc --namespace=grafana -o wide
+kubectl get deployments --namespace=grafana -o wide
+kubectl get svc --namespace=grafana -o wide
+kubectl get pods -A
+kubectl describe pod -n grafana grafana-5c9555fb8b-92rv8 
+kubectl get pods -A
+kubectl get pods -n grafana 
+kubectl get pods -n grafana --watch
+kubectl describe pods -n grafana grafana-5c9555fb8b-92rv8 
+kubectl get pods -n grafana
+kubectl get pods -n grafana --watch
+cd ..
+kubectl get all --watch
+kubectl get pods -A --watch
+pwd
+cd templates/
+ll
+mkdir loki
+cd loki
+mkdir loki
+df -h
+cd ~
+df
+df -h
+du -scp
+du -sch
+lsblk
+cd /
+du -schl
+sudo su - 
+ls -la
+cd ~
+kubectl get pods -A
+kind delete cluster
+cat /etc/os-release 
+docker
+sudo su - 
+bash
+sudo su - 
+newgrp docker
+sudo su -
+ip a
